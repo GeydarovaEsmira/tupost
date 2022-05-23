@@ -39,20 +39,20 @@
             
             var GLTF = new THREE.GLTFLoader();
              
-            GLTF.load("https://raw.githack.com/mrdoob/three.js/dev/examples/models/gltf/Parrot.glb", function(mesh){
+            GLTF.load("https://raw.githack.com/mrdoob/three.js/dev/examples/models/gltf/Horse.glb", function(mesh){
                            
-                parot = mesh.scene;
+                horse = mesh.scene;
 
-                parot.traverse(function(obj){
+                horse.traverse(function(obj){
                     if (obj.isMesh) {
                         obj.castShadow = true;
                         obj.receiveShadow = true;
                     }
                 });
                 
-                parot.position.set(-100, -20, 300); 
+                horse.position.set(-100, -20, 300); 
 
-                scene.add(parot);
+                scene.add(horse);
             });            
 
             controls = new THREE.OrbitControls(camera,renderer.domElement); 
