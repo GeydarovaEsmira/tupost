@@ -7,7 +7,6 @@
         <script src="https://raw.githack.com/mrdoob/three.js/dev/examples/js/controls/OrbitControls.js"></script>
 
         <script>
-
             var renderer = new THREE.WebGLRenderer({antialias: true});
             renderer.setClearColor(0x333333);
             renderer.setPixelRatio(window.devicePixelRatio);
@@ -16,8 +15,6 @@
 
             var camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 10000);
             camera.position.set(-368, 267, 398);
-            
-
             var scene = new THREE.Object3D();
             //scene.background = new Color("skyblue");
             scene.add(camera); 
@@ -62,14 +59,9 @@
             requestAnimationFrame(render);
 
             function render() {
-
                 controls.update(); 
                 renderer.render(scene, camera);
-                 
-                
-                requestAnimationFrame(render);
-
-                
+                requestAnimationFrame(render);    
             }
         </script>
     </body>
